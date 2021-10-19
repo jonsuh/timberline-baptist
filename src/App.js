@@ -163,7 +163,7 @@ function Info() {
         Sherwood, <abbr title="Oregon">OR</abbr> 97140
       </p>
       <ExternalLink
-        href="https://www.google.com/maps/dir//24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
+        href="https://www.google.com/maps/dir//Timberline+Baptist+Church+24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
         className="link d-if"
       >Get directions</ExternalLink>
     </section>
