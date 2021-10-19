@@ -240,7 +240,11 @@ function Info() {
 
 function ExternalLink(props) {
   return (
-    <a target="_blank" rel="noopener" {...props} />
+    <a // eslint-disable-line jsx-a11y/anchor-has-content
+      target="_blank"
+      rel="noopener"
+      {...props}
+    />
   )
 }
 
