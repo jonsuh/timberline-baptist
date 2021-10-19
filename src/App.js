@@ -6,74 +6,6 @@ import headerLogo from "./assets/header-logo.png"
 
 import { ImFacebook2, ImYoutube } from "react-icons/im";
 
-const FOOTER_STYLES = css`
-  color: var(--white);
-  background-color: var(--gray);
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-
-  p {
-    margin-bottom: 0;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  a {
-    color: var(--white);
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  .social {
-    font-size: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-`
-function Footer() {
-  return (
-    <footer role="contentinfo" className={cx(FOOTER_STYLES, "section")}>
-      <div>
-        <p><b>Timberline Baptist Church</b><br />
-        24645 SW Old Hwy 99W<br />
-        Sherwood, OR 97140<br />
-        <a href="tel:5036259956">(503) 625-9956</a></p>
-      </div>
-      <div>
-        <ul className="social">
-          <li>
-            <ExternalLink
-              href="https://www.facebook.com/TimberlineBaptistChurch"
-              aria-label="Facebook"
-              target="_blank"
-              rel="noopener"
-            >
-              <ImFacebook2 />
-            </ExternalLink>
-          </li>
-          <li>
-            <ExternalLink
-              href="https://www.youtube.com/channel/UCTBsNlLBxYcSYq8AXB0mPVw"
-              aria-label="YouTube"
-            >
-              <ImYoutube />
-            </ExternalLink>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  )
-}
-
 function App() {
   return (
     <>
@@ -235,6 +167,77 @@ function Info() {
         className="link d-if"
       >Get directions</ExternalLink>
     </section>
+  )
+}
+
+const FOOTER_STYLES = css`
+  color: var(--white);
+  background-color: var(--gray);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: var(--white);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .social {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+`
+function Footer() {
+  return (
+    <footer role="contentinfo" className={cx(FOOTER_STYLES, "section")}>
+      <div>
+        <p><b>Timberline Baptist Church</b><br />
+        24645 SW Old Hwy 99W<br />
+        Sherwood, OR 97140<br />
+        <a href="tel:5036259956">(503) 625-9956</a></p>
+      </div>
+      <div>
+        <ul className="social">
+          <li>
+            <ExternalLink
+              href="https://www.facebook.com/TimberlineBaptistChurch"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+            >
+              <ImFacebook2 />
+            </ExternalLink>
+          </li>
+          <li>
+            <ExternalLink
+              href="https://www.youtube.com/channel/UCTBsNlLBxYcSYq8AXB0mPVw"
+              aria-label="YouTube"
+            >
+              <ImYoutube />
+            </ExternalLink>
+          </li>
+        </ul>
+      </div>
+    </footer>
   )
 }
 
