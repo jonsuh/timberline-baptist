@@ -47,6 +47,10 @@ p {
   background-color: rgba(var(--link-color-rgb), 0.1);
 }
 
-.d-if {
+.d--if {
   display: inline-flex;
+}
+
+.ws--nw {
+  white-space: nowrap;
 }

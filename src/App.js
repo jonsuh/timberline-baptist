@@ -26,7 +26,7 @@ const HERO_STYLES = css`
                     url(${hero});
   background-color: var(--blue);
   background-size: cover;
-  height: 28rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
 
@@ -49,6 +49,10 @@ const HEADER_STYLES = css`
   padding-bottom: 1rem;
 
   img { height: 3rem }
+
+  @media (min-width: 32rem) {
+    padding-top: 7rem;
+  }
 `
 function Header() {
   return (
@@ -141,7 +145,7 @@ const INFO_STYLES = css`
 
   .times {
     text-align: left;
-    max-width: 16rem;
+    max-width: 20rem;
     margin-left: auto;
     margin-right: auto;
   }
@@ -155,16 +159,17 @@ function Info() {
     <section className={cx("section", INFO_STYLES)}>
       <h2>Services</h2>
       <p className="times">
-        Sundays at 10:30am and 5pm<br />
+        Sundays at 10:30am and 5pm AWANA<br />
         Thursdays at 7pm
       </p>
       <p className="address">
         24645 SW Old Hwy 99W,
-        Sherwood, <abbr title="Oregon">OR</abbr> 97140
+        {" "}
+        <span className="ws--nw">Sherwood, <abbr title="Oregon">OR</abbr> 97140</span>
       </p>
       <ExternalLink
         href="https://www.google.com/maps/dir//Timberline+Baptist+Church+24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
-        className="link d-if"
+        className="link d--if"
       >Get directions</ExternalLink>
     </section>
   )
