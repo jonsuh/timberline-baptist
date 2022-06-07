@@ -223,7 +223,7 @@ function Vbs() {
     <section className={VBS_STYLES}>
       <div className="section section--top">
         <h2>Vacation Bible School</h2>
-        <span>July 26–29, 2022</span>
+        <span>June 26–29, 2022</span>
       </div>
       <div className="image">
 
