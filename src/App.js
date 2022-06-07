@@ -3,6 +3,7 @@ import { css, cx } from "@emotion/css"
 
 import hero from "./assets/hero.jpg"
 import headerLogo from "./assets/header-logo.png"
+import vbsImage from "./assets/vbs-image.png"
 
 import { ImFacebook2, ImYoutube } from "react-icons/im";
 
@@ -15,6 +16,7 @@ function App() {
           <Main />
         </Hero>
         <Info />
+        <Vbs />
       </main>
       <Footer />
     </>
@@ -171,6 +173,67 @@ function Info() {
         href="https://www.google.com/maps/dir//Timberline+Baptist+Church+24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
         className="link d--if"
       >Get directions</ExternalLink>
+    </section>
+  )
+}
+
+const VBS_STYLES = css`
+  .image {
+    background-image: url(${vbsImage});
+    background-color: var(--blue);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30.625rem;
+  }
+
+  .section {
+    text-align: center;
+  }
+
+  .section--top {
+    background-color: #abe3ee;
+    padding-bottom: 0;
+
+    h2 {
+      color: #345897;
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      color: rgba(var(--gray-rgb), 0.5);
+      display: block;
+      margin-bottom: -4rem;
+    }
+  }
+
+  .section--bottom {
+    background-color: #345897;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    a {
+      display: inline-flex;
+      transform: translateY(-3rem);
+    }
+  }
+`
+function Vbs() {
+  return (
+    <section className={VBS_STYLES}>
+      <div className="section section--top">
+        <h2>Vacation Bible School</h2>
+        <span>July 26–29, 2022</span>
+      </div>
+      <div className="image">
+
+      </div>
+      <div className="section section--bottom">
+        <ExternalLink
+          href="https://timberlinebaptist.churchcenter.com/registrations/events/1326872"
+          className="link d--if"
+        >More info or Sign up</ExternalLink>
+      </div>
     </section>
   )
 }
