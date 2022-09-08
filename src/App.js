@@ -145,11 +145,38 @@ const INFO_STYLES = css`
     margin-bottom: 1rem;
   }
 
+  .times__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+
   .times {
     text-align: left;
     max-width: 20rem;
     margin-left: auto;
     margin-right: auto;
+    flex-shrink: 0;
+
+    div {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+
+    span {
+      display: inline-flex;
+      justify-content: end;
+      text-align: right;
+      width: 5rem;
+      margin-right: 0.5rem;
+      opacity: 0.75;
+    }
   }
 
   .address {
@@ -160,10 +187,20 @@ function Info() {
   return (
     <section className={cx("section", INFO_STYLES)}>
       <h2>Services</h2>
-      <p className="times">
-        Sundays at 10:30am and 5pm<br />
-        Wednesdays at 6:00pm AWANA
-      </p>
+      <div className="times__container">
+        <p className="times">
+          <div>Sunday</div>
+          <span>9:30 am</span> Connection Groups<br />
+          <span>10:30 am</span> Morning Service<br />
+          <span>5:00 pm</span> Evening Service
+        </p>
+        <p className="times">
+          <div>Wednesday</div>
+          <span>6:00 pm</span> Awana Clubs<br />
+          <span /> Teen Group<br />
+          <span /> Adult Community Group
+        </p>
+      </div>
       <p className="address">
         24645 SW Old Hwy 99W,
         {" "}
