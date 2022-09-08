@@ -161,8 +161,8 @@ function Info() {
     <section className={cx("section", INFO_STYLES)}>
       <h2>Services</h2>
       <p className="times">
-        Sundays at 10:30am and 5pm AWANA<br />
-        Wednesdays at 6:30pm
+        Sundays at 10:30am and 5pm<br />
+        Wednesdays at 6:00pm AWANA
       </p>
       <p className="address">
         24645 SW Old Hwy 99W,
