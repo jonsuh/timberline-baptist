@@ -15,6 +15,7 @@ function App() {
           <Main />
         </Hero>
         <Info />
+        <Links />
       </main>
       <Footer />
     </>
@@ -208,6 +209,28 @@ function Info() {
         href="https://www.google.com/maps/dir//Timberline+Baptist+Church+24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
         className="link d--if"
       >Get directions</ExternalLink>
+    </section>
+  )
+}
+
+const LINKS_STYLES = css`
+  color: var(--gray);
+  background-color: rgba(var(--white-rgb), 0.9);
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  --link-color-rgb: var(--blue-rgb);
+  --link-color: rgba(var(--link-color-rgb), 1);
+`
+function Links() {
+  return (
+    <section className={cx("section", LINKS_STYLES)}>
+      <ExternalLink href="https://www.facebook.com/TimberlineBaptistChurch" className="link">Facebook</ExternalLink>
+      <ExternalLink href="https://www.facebook.com/TLCSherwood" className="link">Timberline Learning Center</ExternalLink>
     </section>
   )
 }
