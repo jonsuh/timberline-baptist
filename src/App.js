@@ -3,7 +3,6 @@ import { css, cx } from "@emotion/css"
 
 import hero from "./assets/hero.jpg"
 import headerLogo from "./assets/header-logo.png"
-import youthRallyImage from "./assets/youth-rally-image.jpg"
 
 import { ImFacebook2, ImYoutube } from "react-icons/im";
 
@@ -16,7 +15,6 @@ function App() {
           <Main />
         </Hero>
         <Info />
-        <Vbs />
       </main>
       <Footer />
     </>
@@ -210,53 +208,6 @@ function Info() {
         href="https://www.google.com/maps/dir//Timberline+Baptist+Church+24645+SW+Old+Highway+99West,+Sherwood,+OR+97140"
         className="link d--if"
       >Get directions</ExternalLink>
-    </section>
-  )
-}
-
-const YOUTH_RALLY_STYLES = css`
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(${youthRallyImage});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 25rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .section {
-    text-align: center;
-  }
-
-  .section--top {
-    h2 {
-      margin-bottom: 0.5rem;
-    }
-
-    span {
-      opacity: 0.75;
-      display: block;
-    }
-  }
-
-  .section--bottom a {
-    display: inline-flex;
-  }
-`
-function Vbs() {
-  return (
-    <section className={YOUTH_RALLY_STYLES}>
-      <div className="section section--top">
-        <h2>TBC Youth Rally</h2>
-        <span>September 22–23, 2022</span>
-      </div>
-      <div className="section section--bottom">
-        <ExternalLink
-          href="https://timberlinebaptist.churchcenter.com/registrations/events/1354843"
-          className="link d--if"
-        >More info or Sign up</ExternalLink>
-      </div>
     </section>
   )
 }
