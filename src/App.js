@@ -230,7 +230,6 @@ function Links() {
   return (
     <section className={cx("section", LINKS_STYLES)}>
       <ExternalLink href="https://www.facebook.com/TimberlineBaptistChurch" className="link">Facebook</ExternalLink>
-      <ExternalLink href="https://www.facebook.com/TLCSherwood" className="link">Timberline Learning Center</ExternalLink>
     </section>
   )
 }
